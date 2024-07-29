@@ -302,6 +302,7 @@ binary_sensor:
     id: keypad_button_01
     name: Button 01
     internal: false
+    publish_initial_state: true
     keypad_id: keypad
     key: A
     on_press:
