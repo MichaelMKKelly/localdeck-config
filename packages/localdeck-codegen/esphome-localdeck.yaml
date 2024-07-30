@@ -41,9 +41,6 @@ output:
       - light.control:
           id: keypad_button_01_light
           state: !lambda return state;
-esp32_improv:
-  status_indicator: improv_status
-  authorizer: keypad_button_01
 improv_serial: {}
 text_sensor:
   - platform: wifi_info
