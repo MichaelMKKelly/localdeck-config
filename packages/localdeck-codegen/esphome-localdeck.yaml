@@ -1425,5 +1425,5 @@ number:
     lambda: !lambda return id(brightness);
 dashboard_import:
   package_import_url: >-
-    github://LocalBytes/localdeck-config/packages/localdeck-codegen/esphome-localdeck.yaml
+    https://raw.githubusercontent.com/MichaelMKKelly/localdeck-config/main/packages/localdeck-codegen/esphome-localdeck.yaml
 
