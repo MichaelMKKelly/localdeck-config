@@ -24,11 +24,7 @@ esphome:
         effect: Addressable Rainbow
     - delay: 5s
     - light.turn_off:
-        id: ledstrip
-    - delay: 1s
-    - lambda: id(keypad_button_01).publish_state(false);
-    - lambda: id(keypad_button_02).publish_state(false);
-    
+        id: ledstrip    
   project:
     name: localbytes.localdeck
     version: 0.0.1
