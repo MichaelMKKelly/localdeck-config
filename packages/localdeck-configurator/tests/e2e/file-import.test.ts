@@ -1,5 +1,3 @@
-// @vitest-environment nuxt
-
 import * as path from 'node:path';
 import * as fs from 'node:fs/promises';
 
@@ -29,7 +27,7 @@ wifi:
 const FILENAME = 'test-import.yaml';
 
 describe('Import Workflow', async () => {
-  await setupNuxt({});
+  await setupNuxt();
 
   test('Parse the original file', async () => {
     const content = espHomeYaml.parse(preImportExample) as object;
@@ -46,7 +44,15 @@ describe('Import Workflow', async () => {
     // Load the page
     console.log('Loading Page');
     const page = (await createPage('/'));
+
+    const responsePromise = page.waitForResponse(r => r.url().includes('/api/editor'));
+
+    console.log('Clicking');
     await page.getByText(FILENAME).click();
+
+    const response = await responsePromise.then(r => r.json());
+    expect(response.configStr).toBeNull();
+    expect(response.config).toMatchObject({ title: 'LocalBytes LocalDeck 9751c4', buttons: {} });
 
     // Update the friendly name
     console.log('Updating Friendly Name');
