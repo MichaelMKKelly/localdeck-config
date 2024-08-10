@@ -24,7 +24,7 @@ esphome:
         effect: Addressable Rainbow
     - delay: 5s
     - light.turn_off:
-        id: ledstrip    
+        id: ledstrip
   project:
     name: localbytes.localdeck
     version: 0.0.1
@@ -277,25 +277,21 @@ matrix_keypad:
 binary_sensor:
   - platform: gpio
     id: keypad_row_21
-    publish_initial_state: true
     pin:
       number: GPIO21
       allow_other_uses: true
   - platform: gpio
     id: keypad_row_20
-    publish_initial_state: true
     pin:
       number: GPIO20
       allow_other_uses: true
   - platform: gpio
     id: keypad_row_03
-    publish_initial_state: true
     pin:
       number: GPIO3
       allow_other_uses: true
   - platform: gpio
     id: keypad_row_07
-    publish_initial_state: true
     pin:
       number: GPIO7
       allow_other_uses: true
@@ -303,7 +299,6 @@ binary_sensor:
     id: keypad_button_01
     name: Button 01
     internal: false
-    publish_initial_state: true
     keypad_id: keypad
     key: A
     on_press:
@@ -340,7 +335,6 @@ binary_sensor:
     id: keypad_button_10
     name: Button 10
     internal: false
-    publish_initial_state: true
     keypad_id: keypad
     key: J
     on_press:
@@ -377,7 +371,6 @@ binary_sensor:
     id: keypad_button_11
     name: Button 11
     internal: false
-    publish_initial_state: true
     keypad_id: keypad
     key: K
     on_press:
@@ -414,7 +407,6 @@ binary_sensor:
     id: keypad_button_12
     name: Button 12
     internal: false
-    publish_initial_state: true
     keypad_id: keypad
     key: L
     on_press:
@@ -451,7 +443,6 @@ binary_sensor:
     id: keypad_button_13
     name: Button 13
     internal: false
-    publish_initial_state: true
     keypad_id: keypad
     key: M
     on_press:
@@ -488,7 +479,6 @@ binary_sensor:
     id: keypad_button_14
     name: Button 14
     internal: false
-    publish_initial_state: true
     keypad_id: keypad
     key: 'N'
     on_press:
@@ -525,7 +515,6 @@ binary_sensor:
     id: keypad_button_15
     name: Button 15
     internal: false
-    publish_initial_state: true
     keypad_id: keypad
     key: O
     on_press:
@@ -562,7 +551,6 @@ binary_sensor:
     id: keypad_button_16
     name: Button 16
     internal: false
-    publish_initial_state: true
     keypad_id: keypad
     key: P
     on_press:
@@ -599,7 +587,6 @@ binary_sensor:
     id: keypad_button_17
     name: Button 17
     internal: false
-    publish_initial_state: true
     keypad_id: keypad
     key: Q
     on_press:
@@ -636,7 +623,6 @@ binary_sensor:
     id: keypad_button_18
     name: Button 18
     internal: false
-    publish_initial_state: true
     keypad_id: keypad
     key: R
     on_press:
@@ -673,7 +659,6 @@ binary_sensor:
     id: keypad_button_19
     name: Button 19
     internal: false
-    publish_initial_state: true
     keypad_id: keypad
     key: S
     on_press:
@@ -710,7 +695,6 @@ binary_sensor:
     id: keypad_button_02
     name: Button 02
     internal: false
-    publish_initial_state: true
     keypad_id: keypad
     key: B
     on_press:
@@ -747,7 +731,6 @@ binary_sensor:
     id: keypad_button_20
     name: Button 20
     internal: false
-    publish_initial_state: true
     keypad_id: keypad
     key: T
     on_press:
@@ -784,7 +767,6 @@ binary_sensor:
     id: keypad_button_21
     name: Button 21
     internal: false
-    publish_initial_state: true
     keypad_id: keypad
     key: U
     on_press:
@@ -821,7 +803,6 @@ binary_sensor:
     id: keypad_button_22
     name: Button 22
     internal: false
-    publish_initial_state: true
     keypad_id: keypad
     key: V
     on_press:
@@ -858,7 +839,6 @@ binary_sensor:
     id: keypad_button_23
     name: Button 23
     internal: false
-    publish_initial_state: true
     keypad_id: keypad
     key: W
     on_press:
@@ -895,7 +875,6 @@ binary_sensor:
     id: keypad_button_24
     name: Button 24
     internal: false
-    publish_initial_state: true
     keypad_id: keypad
     key: X
     on_press:
@@ -932,7 +911,6 @@ binary_sensor:
     id: keypad_button_03
     name: Button 03
     internal: false
-    publish_initial_state: true
     keypad_id: keypad
     key: C
     on_press:
@@ -969,7 +947,6 @@ binary_sensor:
     id: keypad_button_04
     name: Button 04
     internal: false
-    publish_initial_state: true
     keypad_id: keypad
     key: D
     on_press:
@@ -1006,7 +983,6 @@ binary_sensor:
     id: keypad_button_05
     name: Button 05
     internal: false
-    publish_initial_state: true
     keypad_id: keypad
     key: E
     on_press:
@@ -1043,7 +1019,6 @@ binary_sensor:
     id: keypad_button_06
     name: Button 06
     internal: false
-    publish_initial_state: true
     keypad_id: keypad
     key: F
     on_press:
@@ -1080,7 +1055,6 @@ binary_sensor:
     id: keypad_button_07
     name: Button 07
     internal: false
-    publish_initial_state: true
     keypad_id: keypad
     key: G
     on_press:
@@ -1117,7 +1091,6 @@ binary_sensor:
     id: keypad_button_08
     name: Button 08
     internal: false
-    publish_initial_state: true
     keypad_id: keypad
     key: H
     on_press:
@@ -1154,7 +1127,6 @@ binary_sensor:
     id: keypad_button_09
     name: Button 09
     internal: false
-    publish_initial_state: true
     keypad_id: keypad
     key: I
     on_press:
@@ -1429,5 +1401,4 @@ number:
     lambda: !lambda return id(brightness);
 dashboard_import:
   package_import_url: >-
-    https://raw.githubusercontent.com/MichaelMKKelly/localdeck-config/main/packages/localdeck-codegen/esphome-localdeck.yaml
-
+    github://LocalBytes/localdeck-config/packages/localdeck-codegen/esphome-localdeck.yaml
