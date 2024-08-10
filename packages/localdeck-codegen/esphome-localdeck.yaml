@@ -277,21 +277,25 @@ matrix_keypad:
 binary_sensor:
   - platform: gpio
     id: keypad_row_21
+    publish_initial_state: true
     pin:
       number: GPIO21
       allow_other_uses: true
   - platform: gpio
     id: keypad_row_20
+    publish_initial_state: true
     pin:
       number: GPIO20
       allow_other_uses: true
   - platform: gpio
     id: keypad_row_03
+    publish_initial_state: true
     pin:
       number: GPIO3
       allow_other_uses: true
   - platform: gpio
     id: keypad_row_07
+    publish_initial_state: true
     pin:
       number: GPIO7
       allow_other_uses: true
